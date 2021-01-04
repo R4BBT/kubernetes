@@ -1,0 +1,14 @@
+#Kubernetes Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels: 
+    app: nginx
+meta:
+  replicas: 3
+  selector: 
+    matchlabels:
+      app: nginx
+  template:
+  
