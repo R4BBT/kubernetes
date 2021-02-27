@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: init-Pod
+spec:
+  containers:
+  - name: nginx 
+    image: nginx=1.19.1
+  initContainers:
+  - name: delayContainer
+    image: busybox
+    command: ['sleep', '30']
+
