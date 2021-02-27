@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+  label:
+    app: hello
+spec:
+  containers:
+    - name: busybox
+      image: busybox
+      resource:
+        requests:
+          cpu: "250m"
+          memory: "128Mi"
