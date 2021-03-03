@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Pod
+metadata:
+  name: my-pod-config
+  namespace: default
+spec:
+  containers:
+  - name: container-1
+    image: busybox
+    command: ["/bin/bash", "-c", "env"]
+    env: 
+      - name: SPECIAL_KEY
+        valueFrom:
+          configMapKeyRef:
+            name: special-config
+            key: special.how
+  restartPolicy: Never
