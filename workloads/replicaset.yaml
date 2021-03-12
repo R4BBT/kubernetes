@@ -1,8 +1,23 @@
-apiVersion: app/v1
+apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: replicaSet_1
-  label:
+  name: replicaset1
+  labels:
     app: hello
     tier: front-end
-
+spec:
+  selector:
+    matchLabels:
+      apps: hi
+  replicas: 2
+  template:
+    metadata:
+      name: replicaSet-template
+      labels:
+        apps: hi
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80 
