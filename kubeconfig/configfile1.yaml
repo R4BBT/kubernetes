@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Config
+prefereces: {}
+
+clusters:
+- cluster:
+  name: development
+
+user:
+- name: developer
+
+contexts:
+- context:
+  name: dev-frontend
+
+
