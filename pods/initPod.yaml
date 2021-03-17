@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: init-pod #The name can only include lowercase letters
+spec:
+  containers:
+  - name: nginx 
+    image: nginx #The tag was taken off because it was an invalid image
+  initContainers:
+  - name: delaycontainer #The name can only include lowercase letters
+    image: busybox
+    command: ['sleep', '30']
+
