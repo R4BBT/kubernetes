@@ -6,4 +6,11 @@ spec:
   containers:
   - name: nginx-container
     image: nginx
-  nodeName: ryebread2c.mylabserver.com 
+  nodeName: ryebread2c.mylabserver.com
+  tolerations:
+  - key: "key"
+    operator: "Exists"
+    #    value: "value"
+    #    effect: "NoSchedule"
+    
+     
