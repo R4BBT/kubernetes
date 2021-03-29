@@ -3,6 +3,13 @@ kind: PersistentVolumeClaim
 metadata:
   name: pvc-1
 spec:
-  accessMode: ReadWriteOnce
-  storageMode: Filesystem
-
+  accessModes: 
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 50Mi
+  storageClassName: slow
+#  volumeName: pv-1
+  selector:
+    matchExpressions:
+      - {key: pv, operator: Exists}
