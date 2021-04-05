@@ -1,0 +1,19 @@
+# This will not work because pvc-1 is linked to pv-1 and pv-1 is a local volume type (device) instead of node volume (hostPath)
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pvpod-1
+  labels:
+    app: pvpod
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    volumeMounts: 
+    - name: pvc-1  
+      mountPath: /var/test
+  volumes:
+  - name: pvc-1
+    persistentVolumeClaim:
+      claimName: pvc-1
+
