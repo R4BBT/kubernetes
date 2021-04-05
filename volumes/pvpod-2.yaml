@@ -4,8 +4,8 @@ metadata:
   name: pvpod-2
 spec:
   containers:
-  - name: busybox
-    image: busybox
+  - name: busybox 
+    image: busybox 
     command: ['sh', '-c', 'echo hello >> /var/test/test.txt']
     volumeMounts:
     - name: pvc-2
