@@ -13,7 +13,7 @@ spec:
   storageClassName: slow
   persistentVolumeReclaimPolicy: Recycle 
   local:
-    path: /home/cloud_user/kubernetes/volumes
+    path: /home/cloud_user/kubernetes/volumes/volume
   nodeAffinity:
     required:
       nodeSelectorTerms:
