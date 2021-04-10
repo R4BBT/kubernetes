@@ -11,3 +11,7 @@ spec:
     - ports:
       - protocol: TCP
         port: 80
+      from:
+        - namespaceSelector:
+            matchLabels:
+              app: users-backend
