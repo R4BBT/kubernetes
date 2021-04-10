@@ -1,0 +1,13 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-ingress-except-port80
+  namespace: users-backend
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
+  ingress:
+    - ports:
+      - protocol: TCP
+        port: 80
