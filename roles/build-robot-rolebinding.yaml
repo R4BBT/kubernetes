@@ -4,7 +4,7 @@ metadata:
   name: build-robot-role-binding
 subjects:
   - kind: ServiceAccount
-    name: build-robot
+    name: build-robot-serviceaccount
     apiGroup: ""
 roleRef:
   kind: Role
