@@ -11,9 +11,9 @@ spec:
     metadata:
       labels:
         app: deployment-svc
-     spec:
-        containers:
-        - name: nginx
-          image: nginx
-          ports:
-          - containerPorts: 80
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
